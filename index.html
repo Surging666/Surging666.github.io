@@ -1,40 +1,301 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>引航亚太开放合作 展现大国责任担当</title>
+    <title>导航栏示例</title>
     <style>
-       /* 类选择器 */
-       .cls{
-        color: red;
-       }
-       /* id选择器 */
-       #id{
-        color: blue;
-       }
-       a{
-        /* 去除链接的默认样式 */
-        text-decoration: none;
-       }
-       p{
-        /* 设置行高 */
-        line-height: 2;
-        /* 设置首行缩进 */
-        text-indent: 2em;
-       }
+        .navbar {
+            background-color: gray;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+        }
+        
+        .title {
+            font-family: "楷体", KaiTi, serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            margin: 0;
+        }
+        
+        .logout-link {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        
+        .logout-link:hover {
+            text-decoration: underline;
+        }
+        .search-form-container {
+        margin: 20px auto;
+        padding: 20px;
+        border: none;
+        background-color: none;
+        border-radius: 5px;
+    }
+    
+    .search-form {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .form-group {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
+    
+    .form-group label {
+        margin-right: 5px;
+        font-weight: bold;
+        color: #333;
+    }
+    
+    .form-group input[type="text"] {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        width: 150px;
+    }
+    
+    .form-group select {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        width: 150px;
+    }
+    
+    .form-group input[type="submit"],
+    .form-group input[type="reset"] {
+        padding: 8px 15px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    
+    .form-group input[type="submit"] {
+        background-color: #007bff;
+        color: white;
+    }
+    
+    .form-group input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+    
+    .form-group input[type="reset"] {
+        background-color: #6c757d;
+        color: white;
+    }
+    
+    .form-group input[type="reset"]:hover {
+        background-color: #545b62;
+    }
+    .table-container {
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        border-radius: 5px;
+    }
+    
+    .table-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #333;
+        text-align: left;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+    }
+    
+    th, td {
+        padding: 12px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    th {
+        background-color: #f8f9fa;
+        font-weight: bold;
+        color: #555;
+    }
+    
+    tr:hover {
+        background-color: #f5f5f5;
+    }
+    
+    .avatar-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+    .operation-btn {
+        padding: 5px 10px;
+        margin-right: 5px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 12px;
+    }
+    
+    .edit-btn {
+        background-color: #007bff;
+        color: white;
+    }
+    
+    .delete-btn {
+        background-color: #dc3545;
+        color: white;
+    }
+    
+    .edit-btn:hover {
+        background-color: #0056b3;
+    }
+    
+    .delete-btn:hover {
+        background-color: #c82333;
+    }
+    .footer {
+        background-color: gray;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 30px;
+        margin: 0 auto;
+    }
+    
+    .company-name {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .copyright {
+        font-size: 14px;
+        opacity: 0.8;
+    }
+    #container1{ 
+        width:75%;
+        margin: 0 auto;
+    }
+
     </style>
-    <!-- 引入css样式：外部样式href属性指定样式文件路径，具有很强复用性 -->
-    <link rel="stylesheet" href="css\news.css"></link>
 </head>
 <body>
-    <!-- 定义一个标题：标题内容：引航亚太开放合作 展现大国责任担当 -->
-    <h1 style="text-align: center;">引航亚太开放合作 展现大国责任担当</h1>
-    <!-- 定义一个超链接，展示央视网 -->
-     <a href="https://www.cctv.com/" target="_blank">央视网</a>
-     <span class="cls">2024年5月1日</span>
-     <!-- <span id="id">2024年5月1日</span> -->
-      <video src="" controls width="50%"></video>
-      <p><strong>我</strong>是一行文字</p>
+    <div id="container1">
+                <nav class="navbar">
+                <h1 class="title">Tilas智能学习辅助系统</h1>
+                <a href="#" class="logout-link">退出登录</a>
+            </nav>
+            <!-- 搜索表单区域 -->
+        <div class="search-form-container">
+            <form class="search-form" action="#" method="get">
+                <div class="form-group">
+                    <label for="name">姓名：</label>
+                    <input type="text" id="name" name="name" placeholder="请输入姓名">
+                </div>
+                
+                <div class="form-group">
+                    <label for="gender">性别：</label>
+                    <select id="gender" name="gender">
+                        <option value="">请选择性别</option>
+                        <option value="male">男</option>
+                        <option value="female">女</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="position">职位：</label>
+                    <select id="position" name="position">
+                        <option value="">请选择职位</option>
+                        <option value="class_teacher">班主任</option>
+                        <option value="lecturer">讲师</option>
+                        <option value="student_affairs_manager">学工主管</option>
+                        <option value="teaching_research_manager">教研主管</option>
+                        <option value="counselor">咨询师</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <input type="submit" value="搜索">
+                    <input type="reset" value="重置" style="margin-left: 10px;">
+                </div>
+            </form>
+        </div>
+        <!-- 表格展示区 -->
+        <div class="table-container">
+            <div class="table-title">员工列表</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>性别</th>
+                        <th>头像</th>
+                        <th>职位</th>
+                        <th>入职日期</th>
+                        <th>最后操作时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>夏洛</td>
+                        <td>男</td>
+                        <td><img src="https://via.placeholder.com/40" alt="夏洛头像" class="avatar-img"></td>
+                        <td>讲师</td>
+                        <td>2020-09-01</td>
+                        <td>2023-10-01 14:30</td>
+                        <td>
+                            <button class="operation-btn edit-btn">编辑</button>
+                            <button class="operation-btn delete-btn">删除</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>马冬梅</td>
+                        <td>女</td>
+                        <td><img src="https://via.placeholder.com/40" alt="马冬梅头像" class="avatar-img"></td>
+                        <td>班主任</td>
+                        <td>2019-08-15</td>
+                        <td>2023-10-02 09:15</td>
+                        <td>
+                            <button class="operation-btn edit-btn">编辑</button>
+                            <button class="operation-btn delete-btn">删除</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>袁华</td>
+                        <td>男</td>
+                        <td><img src="https://via.placeholder.com/40" alt="袁华头像" class="avatar-img"></td>
+                        <td>教学主管</td>
+                        <td>2018-07-01</td>
+                        <td>2023-09-28 16:45</td>
+                        <td>
+                            <button class="operation-btn edit-btn">编辑</button>
+                            <button class="operation-btn delete-btn">删除</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 页脚授权区域 -->
+        <div class="footer">
+            <div class="company-name">澎湃科技有限公司</div>
+            <div class="copyright">版权所有 Coperight 2006-2025 All Right Reserved</div>
+        </div>
+    </div>
 </body>
 </html>
